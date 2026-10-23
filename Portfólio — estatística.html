@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfólio — [seu nome]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ece3c8;--ink:#1e1411;--red:#ff2b10;--cream:#f4ebd0;--teal:#1f5a50;--card:#f6efd9;--mute:#6d5b52;
+  --px:'Silkscreen','Courier New',monospace;--tx:'Courier Prime','Courier New',monospace;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#150b09;--ink:#f1e8cf;--card:#211412;--mute:#ab9b8e}}
+:root[data-theme="dark"]{--bg:#150b09;--ink:#f1e8cf;--card:#211412;--mute:#ab9b8e}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--tx)}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.3;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.ph{display:inline;background:var(--red);color:#fff;font:700 .78em/1.9 var(--tx);padding:.1em .5em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.st{position:absolute;font:700 clamp(1.6rem,4vw,3rem)/1 var(--px);pointer-events:none}
+
+/* hero */
+.top{position:relative;overflow:hidden;background:var(--red);padding:clamp(2.5rem,8vw,5.5rem) 5vw clamp(2rem,6vw,4rem);min-height:46vh;display:flex;align-items:center}
+.glitch{position:relative;margin:0;font:700 clamp(2.4rem,11.5vw,9rem)/1 var(--px);color:var(--cream);letter-spacing:-.02em}
+.glitch::after{content:attr(data-t);position:absolute;inset:0;color:var(--teal);clip-path:inset(58% 0 12% 0);transform:translateX(.05em)}
+.photo{position:relative;overflow:hidden;min-height:68vh;display:grid;place-items:center;padding:3rem 5vw 5rem;
+  background:radial-gradient(ellipse at 50% 40%,transparent 35%,rgba(10,6,4,.55) 100%),linear-gradient(162deg,#d9d0a4 0 46%,#2b6a5d 46% 100%)}
+.pola{width:min(300px,64vw);aspect-ratio:3/4;transform:rotate(-3deg);background:linear-gradient(170deg,#e9dfb8,#a9b59a 60%,#3b7a6c);border:12px solid var(--cream);border-bottom-width:48px;
+  box-shadow:0 14px 30px rgba(0,0,0,.35);display:grid;place-items:center;padding:1rem;text-align:center;font-size:.85rem;color:#2a1a14}
+.role{position:absolute;left:0;right:0;bottom:7%;margin:0;text-align:center;font:700 clamp(2rem,10vw,8rem)/1 var(--px);color:var(--red);
+  text-shadow:3px 0 #1a0d09,-3px 0 #1a0d09,0 3px #1a0d09,0 -3px #1a0d09,3px 3px #1a0d09,-3px -3px #1a0d09,3px -3px #1a0d09,-3px 3px #1a0d09}
+.cap{position:absolute;left:5vw;bottom:1rem;margin:0;max-width:30ch;font-size:.68rem;line-height:1.35;color:var(--cream);opacity:.9}
+
+/* corpo */
+.wrap{max-width:980px;margin:0 auto;padding:clamp(3rem,8vw,5.5rem) 5vw 0}
+h2{margin:0 0 1.5rem;font:700 clamp(1.3rem,3.6vw,2rem)/1.15 var(--px);color:var(--red)}
+h2 i{font-style:normal;color:var(--ink)}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:2.5rem}
+.about dl{margin:0;display:grid;gap:.9rem;border-left:3px solid var(--red);padding-left:1.2rem}
+dt{font:700 .85rem/1.2 var(--px);color:var(--mute)}
+dd{margin:.25rem 0 0}
+.case-title{margin:0 0 .5rem;font:700 clamp(1.4rem,4vw,2.3rem)/1.25 var(--px)}
+.sub{margin:0 0 2rem;color:var(--mute);font-style:italic}
+.strip{position:relative;background:#120b09;padding:34px 16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.strip::before,.strip::after{content:"";position:absolute;left:0;right:0;height:12px;
+  background:repeating-linear-gradient(90deg,transparent 0 10px,rgba(244,235,208,.85) 10px 22px,transparent 22px 32px)}
+.strip::before{top:11px}.strip::after{bottom:11px}
+.fr{background:var(--card);padding:1.2rem 1.2rem 1.4rem;border-radius:2px;filter:sepia(.18) saturate(1.1)}
+.fr:nth-child(odd){transform:rotate(-.6deg)}.fr:nth-child(even){transform:rotate(.5deg)}
+.fr h3{margin:0 0 .3rem;font:700 1rem/1.2 var(--px)}
+.fr p{margin:0 0 .8rem}
+.fr .hint{font-size:.85rem;color:var(--mute);font-style:italic}
+.fr.hot{background:var(--red);color:#fff;filter:none}
+.fr.hot .hint{color:#ffd9cf}
+.fr.hot .ph{background:#fff;color:var(--red)}
+.tags{display:flex;flex-wrap:wrap;gap:.6rem}
+.tags span{border:2px solid var(--ink);padding:.15rem .7rem}
+.contact a{display:block;width:fit-content;margin:.2rem 0;color:var(--ink);font:700 clamp(1.1rem,3vw,1.6rem)/1.5 var(--px);text-decoration:none;border-bottom:3px solid var(--red)}
+.contact a:hover,.contact a:focus-visible{background:var(--red);color:#fff;outline:none}
+footer{margin-top:5rem;padding:2rem 5vw 3rem;background:var(--red);color:#fff;font-size:.8rem}
+@media (max-width:720px){.about{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:no-preference){.glitch::after{animation:g 5s steps(1) infinite}}
+@keyframes g{0%,92%{clip-path:inset(58% 0 12% 0);transform:translateX(.05em)}94%{clip-path:inset(20% 0 55% 0);transform:translateX(-.06em)}96%{clip-path:inset(70% 0 5% 0);transform:translateX(.08em)}100%{clip-path:inset(58% 0 12% 0);transform:translateX(.05em)}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top">
+    <span class="st" style="top:9%;left:22%;color:var(--cream)">*</span>
+    <span class="st" style="top:12%;right:9%;color:var(--teal)">*</span>
+    <span class="st" style="bottom:14%;left:6%;color:var(--teal)">*</span>
+    <span class="st" style="bottom:10%;right:24%;color:var(--cream)">*</span>
+    <h1 class="glitch" data-t="seu nome">seu nome</h1>
+  </div>
+  <div class="photo">
+    <div class="pola"><span class="ph">[INFORMAÇÃO FALTANTE: sua foto, de preferência com cara de filme]</span></div>
+    <p class="role">estatística</p>
+    <span class="st" style="top:14%;left:18%;color:var(--red)">*</span>
+    <span class="st" style="top:48%;right:8%;color:var(--red)">*</span>
+    <p class="cap">a análise foi concluída sem interrupções.<br>nenhum ruído detectado.<br>tudo parecia normal.</p>
+  </div>
+</header>
+
+<main>
+  <section class="wrap about" id="sobre">
+    <div>
+      <h2>Quem <i>sou</i></h2>
+      <p><span class="ph">[INFORMAÇÃO FALTANTE: 2 a 3 frases sobre você. Que tipo de pergunta você gosta de responder com dados?]</span></p>
+    </div>
+    <dl>
+      <div><dt>Onde estudo</dt><dd><span class="ph">[INFORMAÇÃO FALTANTE: universidade e período]</span></dd></div>
+      <div><dt>Procuro</dt><dd><span class="ph">[INFORMAÇÃO FALTANTE: estágio, vaga júnior, IC?]</span></dd></div>
+      <div><dt>Onde estou</dt><dd><span class="ph">[INFORMAÇÃO FALTANTE: cidade e se aceita remoto]</span></dd></div>
+    </dl>
+  </section>
+
+  <section class="wrap" id="case">
+    <h2>Case <i>em destaque</i></h2>
+    <h3 class="case-title"><span class="ph">[INFORMAÇÃO FALTANTE: título que seja um resultado ou uma tensão, nunca o nome do projeto]</span></h3>
+    <p class="sub">Um projeto, cinco quadros: o que aconteceu, o que decidi e o que não provei.</p>
+
+    <div class="strip">
+      <article class="fr">
+        <h3>Contexto</h3>
+        <p class="hint">Onde foi, qual era o meu papel, o que estava em jogo.</p>
+        <p><span class="ph">[INFORMAÇÃO FALTANTE]</span></p>
+      </article>
+      <article class="fr">
+        <h3>Problema</h3>
+        <p class="hint">Com evidência, não com adjetivo. O que eu achava antes, o que descobri depois.</p>
+        <p><span class="ph">[INFORMAÇÃO FALTANTE]</span></p>
+      </article>
+      <article class="fr hot">
+        <h3>Decisão difícil</h3>
+        <p class="hint">O que escolhi não fazer, e por quê.</p>
+        <p><span class="ph">[INFORMAÇÃO FALTANTE]</span></p>
+      </article>
+      <article class="fr">
+        <h3>Resultado</h3>
+        <p class="hint">Com número quando existir. E o que não é meu, ou o que a análise não prova.</p>
+        <p><span class="ph">[INFORMAÇÃO FALTANTE]</span></p>
+      </article>
+      <article class="fr">
+        <h3>O que eu faria diferente</h3>
+        <p class="hint">Algo específico, não “aprendi a trabalhar em equipe”.</p>
+        <p><span class="ph">[INFORMAÇÃO FALTANTE]</span></p>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap" id="ferramentas">
+    <h2>Ferramentas que <i>uso</i></h2>
+    <div class="tags"><span class="ph">[INFORMAÇÃO FALTANTE: linguagens, bibliotecas, softwares]</span></div>
+  </section>
+
+  <section class="wrap contact" id="contato">
+    <h2>Vamos <i>conversar</i></h2>
+    <a href="#contato"><span class="ph">[e-mail]</span></a>
+    <a href="#contato"><span class="ph">[LinkedIn]</span></a>
+    <a href="#contato"><span class="ph">[GitHub]</span></a>
+  </section>
+</main>
+
+<footer>Feito com pixels e um pouco de ruído. Tudo que está em vermelho ainda precisa de você.</footer>
+
+</body>
+</html>
